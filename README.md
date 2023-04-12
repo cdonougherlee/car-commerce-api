@@ -1,5 +1,3 @@
-# CarCommerceAPI
-
 ## Description
 
 The purpose of this project is to display my understanding of ASP.NET Core and object-oriented programming and expand on what I learnt from CS335, CS235, and CS230. The web api can be used to for CRUD functionality of different categories of cars in a database, similar to what might be seen on a carsales or trademe site.
@@ -40,7 +38,7 @@ public class Van: Car
 
 #### Polymorphism
 
-Dynamic polymorhism is used for the DisplayDetails method found in each derived class e.g., Van.
+Dynamic polymorhism is used for the displayDetails() method found in each derived class e.g., Van.
 
 ```shell
  public new string displayDetails()
