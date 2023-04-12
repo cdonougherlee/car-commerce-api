@@ -2,9 +2,9 @@
 
 ## Description
 
-The purpose of this project is to display my understanding of ASP.NET Core and object-oriented programming by expanding on what I learnt from CS335, CS235, and CS230. The web api is to be used in a simple page that gives the user CRUD functionality of different categories of cars, similar to what might be seen on a carsales or trademe site.
+The purpose of this project is to display my understanding of ASP.NET Core and object-oriented programming and expand on what I learnt from CS335, CS235, and CS230. The web api can be used to for CRUD functionality of different categories of cars in a database, similar to what might be seen on a carsales or trademe site.
 
-## OOP
+## Obeject-oriented programming
 
 All four principles of OOP are used in the project.
 
