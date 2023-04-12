@@ -13,7 +13,7 @@ namespace CarCommerceAPI.Models
 
         public new string displayDetails()
         {
-            return base.displayDetails() + $" and has {this.CargoVolume}m3 of cargo volume capactiy."; 
+            return base.displayDetails() + $" and has {this.CargoVolume}m3 of cargo volume capacity."; 
         }
     }
 }

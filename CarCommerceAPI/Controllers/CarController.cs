@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CarCommerceAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("cars")]
     [ApiController]
     public class CarController : Controller
     {
@@ -14,7 +14,7 @@ namespace CarCommerceAPI.Controllers
             _carRepository = carRepository;
         }
 
-        [HttpGet("GetAll")]
+        [HttpGet("all")]
         [ProducesResponseType(200, Type = typeof(IEnumerable<Car>))]
         public IActionResult GetCars()
         {

@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CarCommerceAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("electics")]
     [ApiController]
     public class ElectricController : Controller
     {
@@ -14,7 +14,7 @@ namespace CarCommerceAPI.Controllers
             _electricRepository = electricRepository;
         }
 
-        [HttpGet("GetAll")]
+        [HttpGet("all")]
         [ProducesResponseType(200, Type = typeof(IEnumerable<Electric>))]
         public IActionResult GetElectrics()
         {
@@ -54,7 +54,7 @@ namespace CarCommerceAPI.Controllers
             return Ok("Successfully Created");
         }
 
-        [HttpPut("updateprice/{id}")]
+        [HttpPut("{id}/updateprice")]
         [ProducesResponseType(204)]
         public IActionResult UpdatePrice(int id, [FromBody] int price)
         {
