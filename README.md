@@ -153,4 +153,4 @@ id not found response: 404
 
 ## UML diagram
 
-![UML diagram](https://github.com/cdonougherlee/car-commerce-api/blob/main/UML.jpeg?raw=true)
+![UML diagram](https://github.com/cdonougherlee/car-commerce-api/blob/main/UMLdiagram.jpeg?raw=true)
