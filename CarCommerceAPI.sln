@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarCommerceAPI", "CarCommerceAPI\CarCommerceAPI.csproj", "{06B464E5-650B-438D-972F-3F23DDA437B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06B464E5-650B-438D-972F-3F23DDA437B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06B464E5-650B-438D-972F-3F23DDA437B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06B464E5-650B-438D-972F-3F23DDA437B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06B464E5-650B-438D-972F-3F23DDA437B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0408C39A-7775-4430-9FFC-749713748112}
+	EndGlobalSection
+EndGlobal
