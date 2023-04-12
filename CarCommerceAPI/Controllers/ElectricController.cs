@@ -54,16 +54,15 @@ namespace CarCommerceAPI.Controllers
             return Ok("Successfully Created");
         }
 
-        [HttpPut("{id}")]
-        [ProducesResponseType(400)]
+        [HttpPut("updateprice/{id}")]
         [ProducesResponseType(204)]
-        [ProducesResponseType(404)]
-        public IActionResult UpdateElectric(int id, [FromBody] Electric updatedElectric)
+        public IActionResult UpdatePrice(int id, [FromBody] int price)
         {
-            if (updatedElectric == null)
+            Electric electric = _electricRepository.GetElectric(id);   
+            if (electric == null)
                 return BadRequest(ModelState);
 
-            if (id != updatedElectric.Id)
+            if (id != electric.Id)
                 return BadRequest(ModelState);
 
             if (!_electricRepository.ElectricExists(id))
@@ -72,7 +71,7 @@ namespace CarCommerceAPI.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            if (!_electricRepository.UpdateElectric(updatedElectric))
+            if (!_electricRepository.UpdatePrice(electric, price))
                 return StatusCode(500, ModelState);
 
             return NoContent();

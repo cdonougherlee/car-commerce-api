@@ -54,16 +54,15 @@ namespace CarCommerceAPI.Controllers
             return Ok("Successfully Created");
         }
 
-        [HttpPut("{id}")]
-        [ProducesResponseType(400)]
+        [HttpPut("updateprice/{id}")]
         [ProducesResponseType(204)]
-        [ProducesResponseType(404)]
-        public IActionResult UpdateUte(int id, [FromBody] Ute updatedUte)
+        public IActionResult UpdatePrice(int id, [FromBody] int price)
         {
-            if (updatedUte == null)
+            Ute ute = _uteRepository.GetUte(id);
+            if (ute == null)
                 return BadRequest(ModelState);
 
-            if (id != updatedUte.Id)
+            if (id != ute.Id)
                 return BadRequest(ModelState);
 
             if (!_uteRepository.UteExists(id))
@@ -72,7 +71,7 @@ namespace CarCommerceAPI.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            if (!_uteRepository.UpdateUte(updatedUte))
+            if (!_uteRepository.UpdatePrice(ute, price))
                 return StatusCode(500, ModelState);
 
             return NoContent();

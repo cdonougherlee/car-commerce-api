@@ -9,7 +9,7 @@ namespace CarCommerceAPI.Interfaces
         Electric GetElectric(int id);
         public bool ElectricExists(int id);
         bool CreateElectric(Electric electric);
-        bool UpdateElectric(Electric electric);
+        bool UpdatePrice(Electric electric, int price);
         bool DeleteElectric(Electric electric);
         bool Save();
     }

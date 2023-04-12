@@ -8,7 +8,7 @@ namespace CarCommerceAPI.Interfaces
         Ute GetUte(int id);
         public bool UteExists(int id);
         bool CreateUte(Ute ute);
-        bool UpdateUte(Ute ute);
+        bool UpdatePrice(Ute ute, int price);
         bool DeleteUte(Ute ute);
         bool Save();
     }

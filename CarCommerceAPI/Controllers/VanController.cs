@@ -55,16 +55,15 @@ namespace CarCommerceAPI.Controllers
             return Ok("Successfully Created");
         }
 
-        [HttpPut("{id}")]
-        [ProducesResponseType(400)]
+        [HttpPut("updateprice/{id}")]
         [ProducesResponseType(204)]
-        [ProducesResponseType(404)]
-        public IActionResult UpdateVan(int id, [FromBody] Van updatedVan)
+        public IActionResult UpdatePrice(int id, [FromBody] int price)
         {
-            if (updatedVan == null)
+            Van van = _vanRepository.GetVan(id);
+            if (van == null)
                 return BadRequest(ModelState);
 
-            if (id != updatedVan.Id)
+            if (id != van.Id)
                 return BadRequest(ModelState);
 
             if (!_vanRepository.VanExists(id))
@@ -73,7 +72,7 @@ namespace CarCommerceAPI.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            if (!_vanRepository.UpdateVan(updatedVan))
+            if (!_vanRepository.UpdatePrice(van, price))
                 return StatusCode(500, ModelState);
 
             return NoContent();

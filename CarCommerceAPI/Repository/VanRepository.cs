@@ -33,9 +33,9 @@ namespace CarCommerceAPI.Repository
             return Save();
         }
 
-        public bool UpdateVan(Van van)
+        public bool UpdatePrice(Van van, int price)
         {
-            _context.Update(van);
+            van.updatePrice(price);
             return Save();
         }
 

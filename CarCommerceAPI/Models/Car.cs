@@ -2,16 +2,27 @@
 {
     public class Car
     {
-        public int Id { get; set; }
-        public string Brand { get; set; }  
-        public string Model { get; set; }
-        public string Colour { get; set; } 
-        public string Engine { get; set; } 
-        public int NumSeats { get; set; }  
-        public int Price { get; set; }
-        public bool Auction { get; set; }
+        public int Id { get; private set; }
+        public string Brand { get; private set; }  
+        public string Model { get; private set; }
+        public string Colour { get; private set; } 
+        public string Engine { get; private set; } 
+        public int NumSeats { get; private set; }
 
-       
+        public int Price { get; private set; }
+        public bool Auction { get; private set; }
+
+        public Car( string brand, string model, string colour, string engine, int numSeats, int price, bool auction)
+        {
+            Brand = brand;
+            Model = model;
+            Colour = colour;
+            Engine = engine;
+            NumSeats = numSeats;
+            Price = price;
+            Auction = auction;
+        }
+
         public string displayDetails()
         {
             string listing = $"{(this.Auction ? $"Starting bid of: {this.Price}" : $"Asking price of: {this.Price}")}";
@@ -19,17 +30,9 @@
             return $"{listing}\n{details}";
         }
 
-        public Car updatePrice(int Price)
+        public void updatePrice(int price)
         {
-            this.Price = Price;
-            return this;
-        }
-
-        public Car updatePrice(int Price, bool Auction)
-        {
-            updatePrice(Price);
-            this.Auction = Auction;
-            return this;
+            Price = price;
         }
     }
 }
